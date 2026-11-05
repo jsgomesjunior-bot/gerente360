@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sua Gerente IA | Teste grátis para lojas e franquias</title>
+<meta name="description" content="Agentes de IA ligados ao seu ERP que acompanham vendas e metas da sua loja ou franquia. Peça o teste grátis pelo WhatsApp.">
+<meta property="og:title" content="Sua Gerente IA | IA para varejo">
+<meta property="og:description" content="Acompanhe vendas e metas da sua loja ou franquia sem planilha. Peça o teste grátis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gerente360.com.br/">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1572099088297972');fbq('track','PageView');
+</script>
+
+<style>
+:root{
+  --ink:#0B1F3A;
+  --ink-soft:#42526B;
+  --paper:#F4F6F9;
+  --white:#FFFFFF;
+  --line:#D9DFE8;
+  --signal:#2456F5;
+  --signal-dark:#1A3FC0;
+  --wa:#1FA855;
+  --wa-dark:#16803F;
+  --amber:#F2B431;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;font-size:18px;line-height:1.55;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.05;margin:0;letter-spacing:-0.02em}
+h1{font-size:clamp(2.4rem,6.2vw,4.4rem);font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:700;letter-spacing:-0.01em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+/* topo */
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--signal);display:inline-block;box-shadow:0 0 0 4px rgba(36,86,245,.18)}
+.top a.mini{font-size:.95rem;font-weight:700;text-decoration:none;border-bottom:2px solid var(--signal);padding-bottom:2px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 1.05rem "DM Sans",sans-serif;padding:16px 26px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:background .15s,transform .15s}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark)}
+.btn-wa:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:28px 0 72px}
+.hero p.lead{font-size:1.25rem;color:var(--ink-soft);margin:22px 0 30px;max-width:34ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero .note{font-size:.95rem;color:var(--ink-soft);margin-top:16px}
+
+/* mock do WhatsApp: o momento memorável da página */
+.phone{background:var(--ink);border-radius:28px;padding:14px;box-shadow:0 30px 60px -28px rgba(11,31,58,.55);max-width:400px;margin-left:auto;width:100%}
+.phone-bar{display:flex;align-items:center;gap:10px;color:#fff;padding:6px 8px 14px;font-size:.95rem}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--signal);display:grid;place-items:center;font:800 .85rem "Bricolage Grotesque",sans-serif}
+.phone-bar b{display:block;line-height:1.1}
+.phone-bar small{opacity:.7;font-size:.78rem}
+.chat{background:#E9EEF4;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:340px}
+.msg{max-width:88%;padding:10px 13px;border-radius:14px;font-size:.95rem;line-height:1.4;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.msg.in{background:#fff;border-top-left-radius:4px;align-self:flex-start}
+.msg.out{background:#D4F5DF;border-top-right-radius:4px;align-self:flex-end}
+.msg b{font-weight:700}
+.msg small{display:block;margin-top:4px;font-size:.72rem;color:var(--ink-soft)}
+.example{font-size:.78rem;color:rgba(255,255,255,.65);text-align:center;padding:10px 6px 2px}
+.js .msg{opacity:0;transform:translateY(8px)}
+.js .msg.show{opacity:1;transform:none;transition:opacity .35s ease,transform .35s ease}
+
+/* seções */
+section{padding:72px 0}
+.band{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{max-width:640px;margin-bottom:40px}
+.sec-head p{color:var(--ink-soft);margin-top:14px}
+
+.rows{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}
+.row p{color:var(--ink-soft)}
+
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.step{position:relative;padding-top:56px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;font:800 1.1rem "Bricolage Grotesque",sans-serif;display:grid;place-items:center}
+.step p{color:var(--ink-soft);margin-top:8px}
+
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.who div{border-left:4px solid var(--signal);padding-left:18px}
+.who p{color:var(--ink-soft);margin-top:6px}
+
+details{border-bottom:1px solid var(--line);padding:20px 0}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{cursor:pointer;font:700 1.1rem "DM Sans",sans-serif;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--signal)}
+details[open] summary::after{content:"–"}
+details p{color:var(--ink-soft);margin-top:12px;max-width:62ch}
+
+/* formulário */
+.cta{background:var(--ink);color:#fff}
+.cta h2{max-width:14ch}
+.cta .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.cta p.sub{color:#B8C4D9;margin-top:16px;max-width:38ch}
+form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:26px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
+input,select{font:400 1rem "DM Sans",sans-serif;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus{border-color:var(--signal);outline:none;box-shadow:0 0 0 3px rgba(36,86,245,.2)}
+form .btn{width:100%}
+.legal{font-size:.82rem;color:var(--ink-soft)}
+.err{color:#B3261E;font-size:.9rem;min-height:1.2em}
+
+footer{padding:36px 0;font-size:.92rem;color:var(--ink-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+
+@media (max-width:860px){
+  body{font-size:17px}
+  .hero{grid-template-columns:1fr;gap:36px;padding-bottom:48px}
+  .phone{margin:0 auto}
+  .row{grid-template-columns:1fr;gap:8px}
+  .steps,.who{grid-template-columns:1fr}
+  .cta .grid{grid-template-columns:1fr;gap:32px}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .msg{opacity:1;transform:none}
+  .js .msg.show{transition:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#topo"><i aria-hidden="true"></i>Sua Gerente IA</a>
+    <a class="mini" href="#teste">Pedir teste grátis</a>
+  </header>
+
+  <main id="topo">
+    <div class="hero">
+      <div>
+        <h1>Sua loja ganhou uma gerente. Ela é de IA.</h1>
+        <p class="lead">Ela se conecta ao seu ERP, acompanha vendas e metas todos os dias e avisa o que precisa da sua atenção, direto no WhatsApp.</p>
+        <div class="actions">
+          <a class="btn btn-wa" id="cta-hero" href="https://wa.me/5571996712572?text=Quero%20testar%20a%20Sua%20Gerente%20IA">Pedir teste grátis no WhatsApp</a>
+          <a class="btn btn-ghost" href="#como">Ver como funciona</a>
+        </div>
+        <p class="note">Para donos de loja, franqueados e redes de varejo.</p>
+      </div>
+
+      <div class="phone" aria-label="Exemplo de conversa com a Sua Gerente IA">
+        <div class="phone-bar">
+          <span class="avatar" aria-hidden="true">IA</span>
+          <span><b>Sua Gerente IA</b><small>WhatsApp</small></span>
+        </div>
+        <div class="chat" id="chat">
+          <div class="msg in"><b>Bom dia!</b> Resumo de ontem: a loja ficou abaixo da meta diária. O ticket médio está bom, o problema foi o fluxo da tarde.<small>07:30</small></div>
+          <div class="msg out">Quem está mais perto da meta do mês?<small>07:32</small></div>
+          <div class="msg in">Mostro o ranking da equipe e quanto falta para cada pessoa bater a meta. Quer que eu envie para o grupo da loja?<small>07:32</small></div>
+        </div>
+        <p class="example">Exemplo ilustrativo. Os dados reais vêm do seu ERP.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<section class="band" id="o-que-faz">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>O que ela faz no dia a dia</h2>
+      <p>Menos planilha e menos tempo conferindo número, mais tempo para atender e vender.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><h3>Acompanha vendas e metas</h3><p>Lê os dados do seu ERP e mostra como a loja, a franquia ou cada vendedor está em relação à meta.</p></div>
+      <div class="row"><h3>Avisa o que precisa de atenção</h3><p>Quando algo foge do esperado, ela manda o alerta no WhatsApp, sem você precisar abrir relatório.</p></div>
+      <div class="row"><h3>Responde a equipe</h3><p>Vendedores perguntam pelo WhatsApp quanto falta para a meta e recebem a resposta na hora.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Como funciona o teste grátis</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Você chama no WhatsApp</h3><p>Conta qual é a sua operação e qual ERP usa.</p></div>
+      <div class="step"><h3>A gente conecta seus dados</h3><p>Configuramos a Sua Gerente IA com as informações da sua loja.</p></div>
+      <div class="step"><h3>Você vê funcionando</h3><p>Recebe os resumos e as respostas na sua rotina e decide se faz sentido.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><h2>Para quem é</h2></div>
+    <div class="who">
+      <div><h3>Dono de loja</h3><p>Quer saber como o dia foi sem ficar preso a planilha.</p></div>
+      <div><h3>Franqueado</h3><p>Precisa acompanhar metas e resultados de mais de uma unidade.</p></div>
+      <div><h3>Rede de varejo</h3><p>Quer padronizar o acompanhamento entre lojas e equipes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <div class="sec-head"><h2>Dúvidas frequentes</h2></div>
+    <details><summary>Preciso trocar de ERP?</summary><p>Não. A Sua Gerente IA se conecta ao sistema que você já usa. Conte qual é o seu no WhatsApp e confirmamos a integração.</p></details>
+    <details><summary>Como ela conversa comigo e com a minha equipe?</summary><p>Pelo WhatsApp, sem aplicativo novo para instalar.</p></details>
+    <details><summary>Como pedir o teste grátis?</summary><p>Toque em qualquer botão de WhatsApp desta página ou preencha o formulário abaixo. Respondemos para combinar o teste.</p></details>
+    <details><summary>Meus dados ficam seguros?</summary><p>Usamos as informações apenas para configurar e operar o seu teste. Explicamos o que é acessado antes de começar.</p></details>
+  </div>
+</section>
+
+<section class="cta" id="teste">
+  <div class="wrap grid">
+    <div>
+      <h2>Peça seu teste grátis</h2>
+      <p class="sub">Preencha e abriremos uma conversa no WhatsApp com seus dados já preenchidos.</p>
+    </div>
+    <form id="lead" novalidate>
+      <label>Seu nome
+        <input name="nome" autocomplete="name" required>
+      </label>
+      <label>Seu WhatsApp (com DDD)
+        <input name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="71 99999-9999" required>
+      </label>
+      <label>Nome da loja ou rede
+        <input name="empresa" autocomplete="organization">
+      </label>
+      <label>Qual ERP você usa?
+        <select name="erp">
+          <option value="">Selecione</option>
+          <option>VarejOnline</option>
+          <option>Bling</option>
+          <option>Outro</option>
+          <option>Não uso ERP</option>
+        </select>
+      </label>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn btn-wa" type="submit">Pedir teste grátis</button>
+      <p class="legal">Ao enviar, você concorda em ser contatado por WhatsApp sobre o teste. Usamos seus dados só para isso.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> Sua Gerente IA</span>
+    <a href="https://instagram.com/suagerente360" rel="noopener">@suagerente360 no Instagram</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var WHATSAPP = "5571996712572";
+  // Opcional: endpoint (webhook do N8N ou função do Supabase) que recebe o lead em JSON.
+  // Deixe vazio para só abrir o WhatsApp.
+  var ENDPOINT = "";
+
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Conversa de exemplo: uma única sequência ao carregar
+  var msgs = document.querySelectorAll('#chat .msg');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  msgs.forEach(function(m,i){
+    if(reduce){ m.classList.add('show'); return; }
+    setTimeout(function(){ m.classList.add('show'); }, 500 + i*1100);
+  });
+
+  function track(evt){ try{ if(window.fbq) fbq('track', evt); }catch(e){} }
+  document.getElementById('cta-hero').addEventListener('click', function(){ track('Contact'); });
+
+  document.getElementById('lead').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var f = ev.target, err = document.getElementById('err');
+    var nome = f.nome.value.trim(), tel = f.whatsapp.value.replace(/\D/g,'');
+    var empresa = f.empresa.value.trim(), erp = f.erp.value;
+    if(!nome){ err.textContent = 'Informe seu nome.'; f.nome.focus(); return; }
+    if(tel.length < 10 || tel.length > 13){ err.textContent = 'Informe um WhatsApp válido com DDD.'; f.whatsapp.focus(); return; }
+    err.textContent = '';
+
+    var lead = {nome:nome, whatsapp:tel, empresa:empresa, erp:erp, origem:'landing-gerente360', data:new Date().toISOString()};
+    if(ENDPOINT){
+      try{ fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead),keepalive:true}); }catch(e){}
+    }
+    track('Lead');
+
+    var texto = 'Olá! Quero testar a Sua Gerente IA.\nNome: ' + nome +
+      (empresa ? '\nLoja/rede: ' + empresa : '') +
+      (erp ? '\nERP: ' + erp : '');
+    var dest = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto);
+    setTimeout(function(){ window.location.href = dest; }, 350);
+  });
+})();
+</script>
+</body>
+</html>
